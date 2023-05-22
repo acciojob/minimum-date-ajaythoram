@@ -1,6 +1,11 @@
 function minDate(dates) {
   //write you code here
-	return "2023/03/01";
+	dates.sort((a,b)=>{
+		const dateA = new Date(a);
+  const dateB = new Date(b);
+  return dateA - dateB;
+	  })
+	  return dates[0];
 }
 
 // Do not change the code
